@@ -10,6 +10,7 @@ import com.ss007.swiprecycleview.hoders.LoadMoreViewHolder;
 import java.util.List;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RestrictTo;
 import androidx.recyclerview.widget.RecyclerView;
 
 import static com.ss007.swiprecycleview.LoadState.STATE_ERROR;
@@ -24,7 +25,7 @@ public abstract class RefreshRecycleAdapter<T> extends RecyclerView.Adapter impl
 
     private LayoutMode mLayoutMode = LayoutMode.PULL_AND_LOAD;
 
-    private List<T> list;
+    private final List<T> list;
 
     public RefreshRecycleAdapter(List<T> dataSource) {
         list = dataSource;
@@ -155,6 +156,7 @@ public abstract class RefreshRecycleAdapter<T> extends RecyclerView.Adapter impl
     /**
      * 外部不应该调用此方法
      */
+    @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
     public final void loadingMore() {
         if (hasMore && refreshLoadMoreListener != null) {
             if (mLoadState != STATE_LOADING) {

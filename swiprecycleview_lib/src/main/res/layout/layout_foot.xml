@@ -8,6 +8,7 @@
 		style="@style/Widget.AppCompat.ProgressBar"
 		android:layout_width="16dp"
 		android:layout_height="16dp"
+		android:layout_marginEnd="8dp"
 		android:layout_marginRight="8dp" />
 
 	<TextView
