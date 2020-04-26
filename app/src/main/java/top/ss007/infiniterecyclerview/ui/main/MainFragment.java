@@ -1,15 +1,7 @@
 package top.ss007.infiniterecyclerview.ui.main;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +10,10 @@ import android.widget.Toast;
 
 import com.ss007.swiprecycleview.AdapterLoader;
 
-import java.util.List;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import top.ss007.infiniterecyclerview.databinding.MainFragmentBinding;
 import top.ss007.infiniterecyclerview.ui.beautyList.BeautyListAdapter;
@@ -55,7 +49,6 @@ public class MainFragment extends Fragment {
 
     private void initBeautyList(Context context) {
         mAdapter = new BeautyListAdapter(mViewModel.dataSource);
-        mAdapter.setHasMore(true);
         mBinding.pullRefreshList.setLayoutManager(new LinearLayoutManager(context));
         mBinding.pullRefreshList.setAdapter(mAdapter);
         mAdapter.setOnRefreshLoadMoreListener(new AdapterLoader.OnRefreshLoadMoreListener() {
