@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/iv_beauty_head"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/colorAccent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_beauty_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/MC_1"
+        android:textSize="22sp"
+        tools:text="美女一号"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_beauty_head"
+        app:layout_constraintTop_toTopOf="@+id/iv_beauty_head"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_beauty_introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/MC_2"
+        android:textSize="18sp"
+        android:lineSpacingMultiplier="1.2"
+        tools:text="窈窕淑女，君子好逑"
+        app:layout_constraintStart_toStartOf="@id/tv_beauty_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_beauty_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/MC_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_beauty_head"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
