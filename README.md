@@ -13,5 +13,5 @@
 1. 自定义`Adapter`,需要继承 `RefreshRecycleAdapter<T>`
 2. 像使用`RecyclerView`一样
 
-教程：
+教程：[如何快速写一款小而美的《上滑无限加载的控件》](https://blog.csdn.net/ShuSheng0007/article/details/105779625)
 
